@@ -14,9 +14,9 @@ provider "fmc" {
   fmc_insecure_skip_verify = var.fmc_insecure_skip_verify
 }
 
-data "fmc_network_objects" "PrivateVLAN" {
-  name = "VLAN825-Private"
-}
+#data "fmc_network_objects" "PrivateVLAN" {
+#  name = "VLAN825-Private"
+#}
 
 resource "fmc_network_objects" "PrivateVLANDR" {
   name        = "${data.fmc_network_objects.PrivateVLAN.name}-DRsite"
