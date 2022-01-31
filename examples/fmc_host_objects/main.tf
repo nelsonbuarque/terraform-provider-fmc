@@ -14,9 +14,9 @@ provider "fmc" {
   fmc_insecure_skip_verify = var.fmc_insecure_skip_verify
 }
 
-data "fmc_host_objects" "existing_host_1" {
-  name = "CUCM-Pub"
-}
+#data "fmc_host_objects" "existing_host_1" {
+#  name = "CUCM-Pub"
+#}
 resource "fmc_host_objects" "test_host_2" {
   name        = "terraform_test_host_2"
   value       = "1.1.1.2"
@@ -27,6 +27,6 @@ output "test_host_1" {
   value = fmc_host_objects.test_host_2
 }
 
-output "test_exiting_host" {
-  value = data.fmc_host_objects.existing_host_1
-}
+#output "test_exiting_host" {
+#  value = data.fmc_host_objects.existing_host_1
+#}
