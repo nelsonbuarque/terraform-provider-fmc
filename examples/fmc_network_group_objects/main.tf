@@ -33,7 +33,7 @@ resource "fmc_network_objects" "terraform_test_host_6" {
 
 resource "fmc_network_objects" "terraform_test_host_5" {
   name        = "terraform_test_host_5"
-  value       = "1.1.1.200/32"
+  value       = "10.0.1.0/24"
   description = "testing terraform change"
 }
 
@@ -67,6 +67,6 @@ output "new_fmc_network_object_2" {
   value = fmc_network_objects.terraform_test_host_5
 }
 
-output "new_fmc_network_group_object" {
-  value = fmc_network_group_objects.terraform_TestPrivateGroup
-}
+#output "new_fmc_network_group_object" {
+#  value = fmc_network_group_objects.terraform_TestPrivateGroup
+#}
